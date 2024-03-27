@@ -74,7 +74,8 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
     }
     console.log(user);
     // Send JWT token for authentication
-    sendToken(user, 200, res,user.userType);
+    res.status(200).json({message : 'successfully logged in user' });
+    // sendToken(user, 200, res,user.userType);
 
     console.log('User Logged In Successfully!');
 });
