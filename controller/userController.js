@@ -40,7 +40,8 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
             });
     
             // Send JWT token for authentication
-            sendToken(user, 201, res);
+            // sendToken(user, 201, res);
+            res.status(201).json({ message: 'Successful' });
             console.log('User Registered Successfully!');
         }
         // Upload and store user avatar image in Cloudinary
